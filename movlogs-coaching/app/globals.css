@@ -1,0 +1,81 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+:root {
+  --background: #080b12;
+  --surface: #0f1420;
+  --surface-elevated: #141b2a;
+  --foreground: #f5f7ff;
+  --muted: #9eabc2;
+  --border: rgba(79, 140, 255, 0.22);
+  --accent: #4f8cff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-primary: var(--accent);
+  --color-muted-foreground: var(--muted);
+  --font-sans: var(--font-manrope);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-manrope), sans-serif;
+  background:
+    radial-gradient(84rem 52rem at 0% -12%, rgba(79, 140, 255, 0.2), transparent),
+    radial-gradient(68rem 44rem at 100% 2%, rgba(79, 140, 255, 0.14), transparent),
+    var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(79, 140, 255, 0.28);
+}
+
+.surface-card {
+  background: color-mix(in srgb, var(--surface), transparent 3%);
+  border: 1px solid var(--border);
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.glow-word {
+  position: relative;
+  color: #8bc2ff;
+  text-shadow:
+    0 0 12px rgba(79, 140, 255, 0.45),
+    0 0 28px rgba(79, 140, 255, 0.28);
+}
+
+@media (max-width: 640px) {
+  .glow-word {
+    text-shadow:
+      0 0 8px rgba(79, 140, 255, 0.28),
+      0 0 16px rgba(79, 140, 255, 0.16);
+  }
+}
