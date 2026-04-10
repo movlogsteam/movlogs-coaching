@@ -257,7 +257,7 @@ export default function Home() {
               <div className="pointer-events-none absolute inset-x-[3%] -bottom-28 top-[62%] z-0 bg-[radial-gradient(62%_70%_at_50%_28%,rgba(79,140,255,0.08),transparent_74%)] blur-3xl md:bg-[radial-gradient(62%_70%_at_50%_28%,rgba(79,140,255,0.15),transparent_74%)]" />
               <div className="relative z-10 overflow-hidden rounded-2xl border border-[var(--border)] shadow-[0_16px_40px_rgba(0,0,0,0.28)]">
                 <iframe
-                  src="https://www.youtube.com/embed/znKTZ5tG6fE"
+                  src="https://www.youtube.com/embed/uy68rDmxzSE"
                   title="MoVlogs Coaching VSL"
                   loading="lazy"
                   className="aspect-video w-full"
